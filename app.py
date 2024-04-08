@@ -3,6 +3,8 @@ from io import StringIO
 
 from utils.data import read_data_from_sql
 
+st.set_page_config(page_title="Buscador de universos beneficiarios", page_icon="🔍")
+
 st.header("Sistema de búsqueda para universos de beneficiarios")
 
 st.subheader("Ingresa tu archivo txt aquí ⬇⬇⬇")
