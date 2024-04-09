@@ -13,7 +13,7 @@ def read_data_from_sql(table, curp_list):
 
     conn = connect(secrets)
 
-    curp_str = '(\'' + '\',\''.join(map(str, curp_list)) + '\')'
+    curp_str = '(\'' + '\',\''.join(curp_list) + '\')'
 
     query = f'''WITH viviendas_beneficiadas AS (
                 SELECT

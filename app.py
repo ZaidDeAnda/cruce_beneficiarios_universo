@@ -29,7 +29,7 @@ if curp_file:
     stringio = StringIO(curp_file.getvalue().decode("utf-8"))
     curp_str = stringio.read()
 
-    curp_list = curp_str.split('\n')
+    curp_list = [curp[:-1] for curp in curp_str.split('\n')[:-1]] + [curp_str.split('\n')[-1]]
 
     try:
         df = read_data_from_sql('ps', curp_list)
